@@ -1,17 +1,9 @@
 /********* cordova-wifi-ios-plugin.m Cordova Plugin Implementation *******/
 
-#import <Cordova/CDV.h>
+#import "cordova-wifi-ios-plugin.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
+#import <NetworkExtension/NetworkExtension.h> 
 
-
-@interface cordova_wifi_ios_plugin : CDVPlugin {
-  // Member variables go here.
-}
-
-- (void)coolMethod:(CDVInvokedUrlCommand*)command;
-- (void)getWifiInfo:(CDVInvokedUrlCommand*)command;
-
-@end
 
 @implementation cordovawifi_ios_plugin
 
