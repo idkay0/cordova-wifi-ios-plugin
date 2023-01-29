@@ -21,7 +21,7 @@
                 <param name="ios-package" value="cordova-wifi-ios-plugin" />
             </feature>
         </config-file>
-        <header-file src="src/ios/cordova-wifi-ios-plugin.h" />
-        <source-file src="src/ios/cordova-wifi-ios-plugin.m" />
+        <header-file src="src/ios/WifiPlugin.h" />
+        <source-file src="src/ios/WifiPlugin.m" />
     </platform>
 </plugin>
