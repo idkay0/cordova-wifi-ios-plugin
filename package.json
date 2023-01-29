@@ -1,0 +1,29 @@
+{
+  "name": "idea2413.cordova.wifi.plugin",
+  "displayName": "Cordova Wifi Plugin",
+  "version": "1.0.0",
+  "description": "Cordova wifi plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "idkay0",
+  "license": "MIT",
+  "cordova": {
+    "id": "idea2413.cordova.wifi.plugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idkay0/cordova-wifi-ios-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idkay0/cordova-wifi-ios-plugin/issues"
+  },
+  "homepage": "https://github.com/idkay0/cordova-wifi-ios-plugin#readme"
+}
