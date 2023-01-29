@@ -1,3 +1,6 @@
+#ifndef WifiPlugin_h
+#define WifiPlugin_h
+
 #import <Cordova/CDV.h>
 
 
@@ -7,3 +10,5 @@
 - (void)getWifiInfo:(CDVInvokedUrlCommand*)command;
 
 @end
+
+#endif /* WifiPlugin_h */
