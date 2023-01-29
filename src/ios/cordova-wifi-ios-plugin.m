@@ -4,7 +4,7 @@
 #import <SystemConfiguration/CaptiveNetwork.h>
 
 
-@interface cordova-wifi-ios-plugin : CDVPlugin {
+@interface cordova_wifi_ios_plugin : CDVPlugin {
   // Member variables go here.
 }
 
@@ -13,7 +13,7 @@
 
 @end
 
-@implementation cordova-wifi-ios-plugin
+@implementation cordovawifi_ios_plugin
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
 {
