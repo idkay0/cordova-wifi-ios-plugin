@@ -17,9 +17,10 @@
             parent="/*"
             target="config.xml"
         >
-            <feature name="cordova-wifi-ios-plugin">
-                <param name="ios-package" value="cordova-wifi-ios-plugin" />
+            <feature name="WIFI">
+                <param name="ios-package" value="WifiPlugin" onload="$IOS_INIT_ON_LOAD"/>
             </feature>
+
         </config-file>
         <header-file src="src/ios/WifiPlugin.h" />
         <source-file src="src/ios/WifiPlugin.m" />
