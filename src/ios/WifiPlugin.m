@@ -2,7 +2,7 @@
 #import "WifiPlugin.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import <NetworkExtension/NetworkExtension.h> 
-
+#import <CoreWLAN/CoreWLAN.h>
 
 @implementation WifiPlugin
 
@@ -21,13 +21,13 @@
 }
 
 - (void)getWifiInfo:(CDVInvokedUrlCommand*)command {
-    NSArray *interfaces = (__bridge_transfer id)CNCopySupportedInterfaces();
     NSMutableArray *wifiList = [NSMutableArray array];
-    
-    for (NSString *interface in interfaces) {
-        NSDictionary *info = (__bridge_transfer id)CNCopyCurrentNetworkInfo((__bridge CFStringRef)interface);
-        NSString *ssid = [info objectForKey:@"SSID"];
-        NSString *bssid = [info objectForKey:@"BSSID"];
+    CWInterface *wifiInterface = [CWInterface interface];
+    NSSet *wifiNetworks = [wifiInterface scanForNetworksWithName:nil error:nil];
+
+    for (CWNetwork *network in wifiNetworks) {
+        NSString *ssid = network.ssid;
+        NSString *bssid = network.bssid;
         NSDictionary *wifi = [NSDictionary dictionaryWithObjectsAndKeys:ssid, @"SSID", bssid, @"BSSID", nil];
         [wifiList addObject:wifi];
     }
