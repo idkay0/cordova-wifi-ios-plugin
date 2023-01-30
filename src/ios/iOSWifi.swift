@@ -9,15 +9,12 @@ import SystemConfiguration.CaptiveNetwork
     var wifiList: [(ssid: String, mac: String)] = []
 
     func getWifiInfo(_ command: CDVInvokedUrlCommand)  {
-
         let hotspotHelper = NEHotspotHelper.init()
-        let hotspotNetworks = hotspotHelper.supportedNetworkInterfaces
+        let hotspotNetworks = NEHotspotHelper.supportedNetworkInterfaces()
         
-        var wifiList =  [(ssid: String, mac: String)] = []
-        for network in hotspotNetworks {
-            if network.ssid != nil {
-                wifiList.append( ( network.ssid, network.bssid)  )
-            }
+        //var wifiList =  [(ssid: String, mac: String)] = []
+        for network in hotspotNetworks as! [NEHotspotNetwork] {
+            wifiList.append( ( network.ssid, network.bssid)  )
         }
         let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: wifiList)
         self.commandDelegate!.send(pluginResult, callbackId: command.callbackId)

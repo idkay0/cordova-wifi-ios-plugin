@@ -5,7 +5,7 @@ var WifiPlugin = {
     //     cordova.exec(success, error, "WIFI", "coolMethod", [arg0]);
     // },
     getWifiInfo: function (arg0, success, error) {
-        cordova.exec(success, error, "WIFI", "getWifiInfo", [arg0]);
+        cordova.exec(success, error, "idea2413.cordova.wifi.plugin", "getWifiInfo", [arg0]);
     }
 };
 
