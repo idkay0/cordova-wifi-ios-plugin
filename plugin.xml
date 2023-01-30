@@ -23,6 +23,6 @@
             </feature>
 
         </config-file>
-        <source-file src="src/ios/iOSWifi.m" />
+        <source-file src="src/ios/iOSWifi.swift" />
     </platform>
 </plugin>
