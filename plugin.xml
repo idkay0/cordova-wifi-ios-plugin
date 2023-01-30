@@ -19,11 +19,10 @@
             target="config.xml"
         >
             <feature name="WIFI">
-                <param name="ios-package" value="WifiPlugin" onload="$IOS_INIT_ON_LOAD"/>
+                <param name="ios-package" value="iOSWifi" onload="$IOS_INIT_ON_LOAD"/>
             </feature>
 
         </config-file>
-        <header-file src="src/ios/WifiPlugin.h" />
-        <source-file src="src/ios/WifiPlugin.m" />
+        <source-file src="src/ios/iOSWifi.m" />
     </platform>
 </plugin>
